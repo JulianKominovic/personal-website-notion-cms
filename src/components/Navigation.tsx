@@ -24,19 +24,14 @@ export const NavigationItems = [
     type: 'internal',
   },
   {
-    name: 'Uses',
-    href: '/uses',
+    name: 'Techs',
+    href: '/techstack',
     type: 'internal',
   },
   {
     name: 'Resume',
     href: 'https://cv.jarocki.me',
     type: 'external',
-  },
-  {
-    name: 'About',
-    href: '/about',
-    type: 'internal',
   },
 ] as const;
 
@@ -81,7 +76,7 @@ export const DesktopNavigation = (
 ) => {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      <ul className="flex px-3 text-sm font-medium rounded-full shadow-lg bg-white/90 text-zinc-800 shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         {NavigationItems.map((item) => {
           if (item.type === 'internal') {
             return (
@@ -94,7 +89,7 @@ export const DesktopNavigation = (
           return (
             <a
               key={item.href}
-              className="transition hover:text-primary px-3 py-2"
+              className="px-3 py-2 transition hover:text-primary"
               href={item.href}
               target="_blank"
             >
@@ -110,9 +105,9 @@ export const DesktopNavigation = (
 export const MobileNavigation = (props: React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="flex items-center px-4 py-2 text-sm font-medium rounded-full shadow-lg group bg-white/90 text-zinc-800 shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
-        <ChevronDownIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
+        <ChevronDownIcon className="w-2 h-auto ml-3 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
       </Popover.Button>
       <Transition.Root>
         <Transition.Child
@@ -137,16 +132,16 @@ export const MobileNavigation = (props: React.HTMLAttributes<HTMLDivElement>) =>
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
+            className="fixed z-50 p-8 origin-top bg-white inset-x-4 top-8 rounded-3xl ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
           >
             <div className="flex flex-row-reverse items-center justify-between">
-              <Popover.Button aria-label="Close menu" className="-m-1 p-1">
-                <CloseIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
+              <Popover.Button aria-label="Close menu" className="p-1 -m-1">
+                <CloseIcon className="w-6 h-6 text-zinc-500 dark:text-zinc-400" />
               </Popover.Button>
               <h2 className="text-sm font-medium">Navigation</h2>
             </div>
             <nav className="mt-6">
-              <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
+              <ul className="-my-2 text-base divide-y divide-zinc-100 text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 {NavigationItems.map((item) => (
                   <MobileNavItem key={item.href} href={item.href}>
                     {item.name}

@@ -3,8 +3,6 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Quote } from '../Quote';
-
 //TODO: improve types here, cleanup the code
 type Props = {
   block: any;
@@ -41,7 +39,7 @@ export const NotionBlockRenderer = ({ block }: Props) => {
       );
     case 'bulleted_list':
       return (
-        <ul className="list-outside list-disc">
+        <ul className="list-disc list-outside">
           {value.children.map((block: any) => (
             <NotionBlockRenderer key={block.id} block={block} />
           ))}
@@ -49,7 +47,7 @@ export const NotionBlockRenderer = ({ block }: Props) => {
       );
     case 'numbered_list':
       return (
-        <ol className="list-outside list-decimal">
+        <ol className="list-decimal list-outside">
           {value.children.map((block: any) => (
             <NotionBlockRenderer key={block.id} block={block} />
           ))}
@@ -107,8 +105,6 @@ export const NotionBlockRenderer = ({ block }: Props) => {
       );
     case 'divider':
       return <hr key={id} />;
-    case 'quote':
-      return <Quote key={id} quote={value.rich_text[0].plain_text} />;
     case 'code':
       return (
         <pre className={`language-${value.language}`}>
