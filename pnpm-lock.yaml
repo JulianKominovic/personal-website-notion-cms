@@ -80,6 +80,9 @@ importers:
       sharp:
         specifier: ^0.32.6
         version: 0.32.6
+      simple-icons:
+        specifier: ^11.15.0
+        version: 11.15.0
     devDependencies:
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^4.0.0
@@ -3129,6 +3132,10 @@ packages:
 
   simple-get@4.0.1:
     resolution: {integrity: sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==}
+
+  simple-icons@11.15.0:
+    resolution: {integrity: sha512-uDAdtIGc56YJiGpdzImENY4E+5qtHEorW11KoXiwDj4u4YSY74G+q/a9idlY8iEqrjghHGkZ/ras0jRT7JpDTQ==}
+    engines: {node: '>=0.12.18'}
 
   simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
@@ -6851,6 +6858,8 @@ snapshots:
       decompress-response: 6.0.0
       once: 1.4.0
       simple-concat: 1.0.1
+
+  simple-icons@11.15.0: {}
 
   simple-swizzle@0.2.2:
     dependencies:
