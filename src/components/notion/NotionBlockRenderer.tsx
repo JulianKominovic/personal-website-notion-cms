@@ -3,6 +3,27 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Quote } from '../Quote';
+import { getHighlighter } from 'shiki';
+
+// `getHighlighter` is async, it initializes the internal and
+// loads the themes and languages specified.
+const highlighter = await getHighlighter({
+  themes: ['vitesse-light', 'vitesse-dark'],
+  langs: [
+    'javascript',
+    'typescript',
+    'tsx',
+    'jsx',
+    'html',
+    'css',
+    'sass',
+    'shellscript',
+    'json',
+    'yaml',
+    'markdown',
+    'plaintext',
+  ],
+});
 
 //TODO: improve types here, cleanup the code
 type Props = {
@@ -12,8 +33,15 @@ type Props = {
 export const NotionBlockRenderer = ({ block }: Props) => {
   const { type, id } = block;
   const value = block[type];
-
   switch (type) {
+    case 'code':
+      // then later you can use `highlighter.codeToHtml` synchronously
+      // with the loaded themes and languages.
+      const code = highlighter.codeToHtml(block.code.rich_text[0].plain_text, {
+        lang: block.code.language,
+        theme: 'vitesse-dark',
+      });
+      return <div className="font-mono" dangerouslySetInnerHTML={{ __html: code }}></div>;
     case 'callout':
       return (
         <div
