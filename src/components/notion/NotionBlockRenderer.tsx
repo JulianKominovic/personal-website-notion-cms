@@ -2,6 +2,7 @@ import { TextRichTextItemResponse } from '@notionhq/client/build/src/api-endpoin
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Quote } from '../Quote';
 
 //TODO: improve types here, cleanup the code
 type Props = {
@@ -13,12 +14,47 @@ export const NotionBlockRenderer = ({ block }: Props) => {
   const value = block[type];
 
   switch (type) {
+    case 'callout':
+      return (
+        <div
+          className={clsx('p-4 my-4 border-l-4', {
+            'bg-blue-100 dark:bg-blue-800 border-blue-200 dark:border-blue-600':
+              value.color === 'blue_background',
+            'bg-zinc-100 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-600':
+              value.color === 'gray_background',
+            'bg-green-100 dark:bg-green-800 border-green-200 dark:border-green-600':
+              value.color === 'green_background',
+            'bg-yellow-100 dark:bg-yellow-800 border-yellow-200 dark:border-yellow-600':
+              value.color === 'yellow_background',
+            'bg-red-100 dark:bg-red-800 border-red-200 dark:border-red-600':
+              value.color === 'red_background',
+            'bg-purple-100 dark:bg-purple-800 border-purple-200 dark:border-purple-600':
+              value.color === 'purple_background',
+            'bg-pink-100 dark:bg-pink-800 border-pink-200 dark:border-pink-600':
+              value.color === 'pink_background',
+            'bg-orange-100 dark:bg-orange-800 border-orange-200 dark:border-orange-600':
+              value.color === 'orange_background',
+            'bg-cyan-100 dark:bg-cyan-800 border-cyan-200 dark:border-cyan-600':
+              value.color === 'cyan_background',
+            'bg-teal-100 dark:bg-teal-800 border-teal-200 dark:border-teal-600':
+              value.color === 'teal_background',
+            'bg-lime-100 dark:bg-lime-800 border-lime-200 dark:border-lime-600':
+              value.color === 'lime_background',
+            'bg-amber-100 dark:bg-amber-800 border-amber-200 dark:border-amber-600':
+              value.color === 'amber_background',
+          })}
+        >
+          <NotionText textItems={value.rich_text} />
+        </div>
+      );
     case 'paragraph':
       return (
         <p>
           <NotionText textItems={value.rich_text} />
         </p>
       );
+    case 'quote':
+      return <Quote key={id} quote={value.rich_text[0].plain_text} />;
     case 'heading_1':
       return (
         <h1>

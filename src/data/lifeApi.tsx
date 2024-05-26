@@ -1,4 +1,3 @@
-import { ExternalLink } from '../components/ExternalLink';
 import { GitHubIcon } from '../components/icons/GitHubIcon';
 import { XIcon } from '../components/icons/XIcon';
 
@@ -37,13 +36,12 @@ import {
   siStyledcomponents,
   siTailwindcss,
   siTauri,
-  siTermius,
   siTestinglibrary,
   siTypescript,
   siUbuntu,
   siVisualstudiocode,
   siVite,
-  siVsco,
+  siWarp,
   siWebpack,
 } from 'simple-icons';
 export const Name = 'Julian Kominovic';
@@ -442,17 +440,17 @@ export const TechRelated: Record<
     },
     {
       title: 'Visual Studio Code',
-      description: `I still miss WebStorm but at least VS Code does not consume 1000% CPU when I open it. And to be fair, it's a great editor.`,
+      description: 'The most popular code editor.',
       href: 'https://code.visualstudio.com/',
       frecuency: 'everyday',
       svgIcon: siVisualstudiocode,
     },
     {
       title: 'Terminal',
-      description: `I'm honestly not even sure what features I get with this that aren't just part of the macOS Terminal but it's what I use.`,
-      href: 'https://iterm2.com/',
+      description: 'Warp on Mac. Native terminal on Ubuntu.',
+      href: 'https://www.warp.dev/',
       frecuency: 'everyday',
-      svgIcon: siTermius,
+      svgIcon: siWarp,
     },
     {
       title: 'Figma',
