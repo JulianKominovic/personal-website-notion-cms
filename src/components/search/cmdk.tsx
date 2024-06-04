@@ -63,7 +63,7 @@ export default function Cmdk() {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
-                className="h-5 w-5 dark:fill-zinc-700 dark:stroke-zinc-500 stroke-primary transition [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-primary [@media_not_(prefers-color-scheme:dark)]:stroke-primary"
+                className="w-5 h-5 transition dark:fill-zinc-700 dark:stroke-zinc-500 stroke-primary group-hover:stroke-zinc-400"
               >
                 <path
                   d="M20.3133 11.1566C20.3133 16.2137 16.2137 20.3133 11.1566 20.3133C6.09956 20.3133 2 16.2137 2 11.1566C2 6.09956 6.09956 2 11.1566 2C16.2137 2 20.3133 6.09956 20.3133 11.1566Z"
