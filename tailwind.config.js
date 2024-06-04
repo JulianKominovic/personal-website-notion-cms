@@ -9,6 +9,16 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      animation: {
+        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
+      },
+      keyframes: {
+        'border-beam': {
+          '100%': {
+            'offset-distance': '100%',
+          },
+        },
+      },
       fontFamily: {
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],
@@ -55,6 +65,7 @@ module.exports = {
             'blockquote p:last-of-type::after': false,
           },
         },
+
         dark: {
           css: {
             color: theme('colors.gray.200'),

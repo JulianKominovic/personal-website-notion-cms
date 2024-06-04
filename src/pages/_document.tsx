@@ -1,8 +1,15 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 
+import clsx from 'clsx';
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
+
 export default function Document() {
   return (
-    <Html className="h-full antialiased" lang="en">
+    <Html
+      className={clsx('h-full antialiased raycast', GeistMono.variable, GeistSans.variable)}
+      lang="en"
+    >
       <Head>
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
@@ -11,7 +18,11 @@ export default function Document() {
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <meta name="theme-color" content="#18181b" />
       </Head>
-      <body className="flex flex-col h-full bg-zinc-50 dark:bg-black text-zinc-700 dark:text-zinc-300">
+      <body
+        className={clsx(
+          'flex flex-col h-full bg-zinc-50 dark:bg-black text-zinc-700 dark:text-zinc-300',
+        )}
+      >
         <Main />
         <NextScript />
       </body>
