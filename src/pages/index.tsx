@@ -34,8 +34,10 @@ export default function Home({ latestNotes }: Props) {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <PageTitle>{Name}</PageTitle>
-          <p className="max-w-2xl mt-6 text-base text-balance">{About}</p>
-          <div className="flex gap-6 mt-6">
+          <p className="max-w-2xl mt-6 text-base text-balance" id="home-about">
+            {About}
+          </p>
+          <div className="flex gap-6 mt-6" id="home-socialmedia">
             {SocialMedia.map((socialProfile) => (
               <SocialLink
                 key={socialProfile.name}

@@ -39,6 +39,7 @@ export default function Techstack() {
                   .map((tool) => {
                     return (
                       <Tool
+                        id={tool.title}
                         key={tool.title}
                         icon={
                           <>

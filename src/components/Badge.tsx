@@ -11,7 +11,7 @@ type Props = (
   | {
       href: string;
     }
-) & { className?: string };
+) & { className?: string; id?: string };
 
 export const Badge = ({ className, children, ...otherProps }: PropsWithChildren<Props>) => {
   if ('href' in otherProps)

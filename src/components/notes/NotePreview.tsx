@@ -26,6 +26,7 @@ interface Props {
 export const NotePreview = ({ note, dense }: Props) => {
   return (
     <motion.div
+      id={note.slug}
       initial={ANIMATION_FROM_PROPS}
       whileInView={ANIMATION_TO_PROPS}
       viewport={{ once: true }}
@@ -46,7 +47,7 @@ export const NotePreview = ({ note, dense }: Props) => {
           <Card.Cta>Read note</Card.Cta>
         </Card>
         {!dense && (
-          <Card.Eyebrow as="time" dateTime={note.publishedAt} className="mt-1 hidden md:block">
+          <Card.Eyebrow as="time" dateTime={note.publishedAt} className="hidden mt-1 md:block">
             {formatDate(note.publishedAt)}
             {note.inProgress && <StaticBadge className="mt-2">Work in progress</StaticBadge>}
           </Card.Eyebrow>

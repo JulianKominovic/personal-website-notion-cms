@@ -2,14 +2,15 @@ import { Analytics } from '@vercel/analytics/react';
 import 'focus-visible';
 import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
+import React, { useEffect, useRef } from 'react';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
-import React, { useEffect, useRef } from 'react';
-
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import '../styles/index.css';
 import '../styles/prism.css';
+import '../styles/raycast.css';
+import clsx from 'clsx';
 
 function usePrevious(value: string) {
   let ref = useRef<string>();
@@ -27,7 +28,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <ThemeProvider attribute="class">
-        <div className={`${GeistSans.className}`}>
+        <div className={clsx(GeistSans.variable, GeistMono.variable)}>
           <div className="fixed inset-0 flex justify-center sm:px-8">
             <div className="flex w-full max-w-7xl lg:px-8">
               <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
