@@ -3,6 +3,7 @@ import { Head, Html, Main, NextScript } from 'next/document';
 import clsx from 'clsx';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
+import Script from 'next/script';
 
 export default function Document() {
   return (

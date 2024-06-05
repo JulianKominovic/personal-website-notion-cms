@@ -30,10 +30,15 @@ export default function Notes({ notes, tags }: Props) {
         title="Notes on software, building products, and other stuff."
         intro="All of my thoughts on programming, building products and other random stuff. Not structured."
       >
-        <h3 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">Tags</h3>
+        <h3
+          id="tags"
+          className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100"
+        >
+          Tags
+        </h3>
         <div className="flex flex-wrap max-w-xl gap-1 mt-4 font-mono">
           {tags.map((tag) => (
-            <Badge key={tag} href={`/tags/${tag}`}>
+            <Badge id={tag} key={tag} href={`/tags/${tag}`}>
               #{tag}
             </Badge>
           ))}
