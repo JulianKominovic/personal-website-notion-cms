@@ -1,4 +1,5 @@
-![screenshot](screenshots/screenshot.png)
+![image](https://github.com/JulianKominovic/personal-website-notion-cms/assets/70329467/656678f4-60e3-4199-9041-b32f4d6e4311)
+
 
 # Julian Kominovic - Personal website built using Next.js and Notion as headless CMS
 

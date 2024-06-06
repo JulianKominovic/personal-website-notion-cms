@@ -32,10 +32,11 @@ export default function Creating() {
         <p className="mt-2 text-base">Projects I currently work on.</p>
         <ul
           role="list"
-          className="mt-12 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 mt-12 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {MyCurrentProjects.map((project) => (
             <motion.li
+              id={project.title}
               key={project.title}
               initial={ANIMATION_FROM_PROPS}
               whileInView={ANIMATION_TO_PROPS}
@@ -53,7 +54,7 @@ export default function Creating() {
         </p>
         <ul
           role="list"
-          className="mt-12 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 mt-12 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {MyPastProjects.map((project) => (
             <motion.li

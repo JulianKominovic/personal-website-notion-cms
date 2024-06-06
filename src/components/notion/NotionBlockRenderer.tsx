@@ -41,10 +41,11 @@ export const NotionBlockRenderer = ({ block }: Props) => {
         lang: block.code.language,
         theme: 'vitesse-dark',
       });
-      return <div className="font-mono" dangerouslySetInnerHTML={{ __html: code }}></div>;
+      return <div id={id} className="font-mono" dangerouslySetInnerHTML={{ __html: code }}></div>;
     case 'callout':
       return (
         <div
+          id={id}
           className={clsx('p-4 my-4 border-l-4', {
             'bg-blue-100 dark:bg-blue-800 border-blue-200 dark:border-blue-600':
               value.color === 'blue_background',
@@ -77,7 +78,7 @@ export const NotionBlockRenderer = ({ block }: Props) => {
       );
     case 'paragraph':
       return (
-        <p>
+        <p id={id}>
           <NotionText textItems={value.rich_text} />
         </p>
       );
@@ -85,19 +86,19 @@ export const NotionBlockRenderer = ({ block }: Props) => {
       return <Quote key={id} quote={value.rich_text[0].plain_text} />;
     case 'heading_1':
       return (
-        <h1>
+        <h1 id={id}>
           <NotionText textItems={value.rich_text} />
         </h1>
       );
     case 'heading_2':
       return (
-        <h2>
+        <h2 id={id}>
           <NotionText textItems={value.rich_text} />
         </h2>
       );
     case 'heading_3':
       return (
-        <h3>
+        <h3 id={id}>
           <NotionText textItems={value.rich_text} />
         </h3>
       );
@@ -120,7 +121,7 @@ export const NotionBlockRenderer = ({ block }: Props) => {
     case 'bulleted_list_item':
     case 'numbered_list_item':
       return (
-        <li className="pl-0">
+        <li className="pl-0" id={id}>
           <NotionText textItems={value.rich_text} />
           {!!value.children &&
             value.children.map((block: any) => (
@@ -130,7 +131,7 @@ export const NotionBlockRenderer = ({ block }: Props) => {
       );
     case 'to_do':
       return (
-        <div>
+        <div id={id}>
           <label htmlFor={id}>
             <input type="checkbox" id={id} defaultChecked={value.checked} />{' '}
             <NotionText textItems={value.rich_text} />
@@ -139,7 +140,7 @@ export const NotionBlockRenderer = ({ block }: Props) => {
       );
     case 'toggle':
       return (
-        <details>
+        <details id={id}>
           <summary>
             <NotionText textItems={value.rich_text} />
           </summary>
@@ -149,12 +150,12 @@ export const NotionBlockRenderer = ({ block }: Props) => {
         </details>
       );
     case 'child_page':
-      return <p>{value.title}</p>;
+      return <p id={id}>{value.title}</p>;
     case 'image':
       const src = value.type === 'external' ? value.external.url : value.file.url;
       const caption = value.caption ? value.caption[0]?.plain_text : '';
       return (
-        <figure>
+        <figure id={id}>
           <Image
             className="object-cover"
             placeholder="blur"
@@ -168,20 +169,14 @@ export const NotionBlockRenderer = ({ block }: Props) => {
         </figure>
       );
     case 'divider':
-      return <hr key={id} />;
-    case 'code':
-      return (
-        <pre className={`language-${value.language}`}>
-          <code key={id}>{value.rich_text[0].plain_text}</code>
-        </pre>
-      );
+      return <hr id={id} key={id} />;
     case 'file':
       const src_file = value.type === 'external' ? value.external.url : value.file.url;
       const splitSourceArray = src_file.split('/');
       const lastElementInArray = splitSourceArray[splitSourceArray.length - 1];
       const caption_file = value.caption ? value.caption[0]?.plain_text : '';
       return (
-        <figure>
+        <figure id={id}>
           <div>
             📎{' '}
             <Link href={src_file} passHref>
@@ -194,7 +189,7 @@ export const NotionBlockRenderer = ({ block }: Props) => {
     case 'bookmark':
       const href = value.url;
       return (
-        <a href={href} target="_brank">
+        <a id={id} href={href} target="_brank">
           {href}
         </a>
       );

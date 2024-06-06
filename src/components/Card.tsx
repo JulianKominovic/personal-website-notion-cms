@@ -6,9 +6,10 @@ const CardRoot = ({
   as: Component = 'div',
   className,
   children,
+  ...rest
 }: React.PropsWithChildren<{ as?: React.ElementType; className?: string }>) => {
   return (
-    <Component className={clsx(className, 'group relative flex flex-col items-start')}>
+    <Component className={clsx(className, 'group relative flex flex-col items-start')} {...rest}>
       {children}
     </Component>
   );
@@ -17,9 +18,9 @@ const CardRoot = ({
 const CardLink = ({ children, ...props }: React.PropsWithChildren<LinkProps>) => {
   return (
     <>
-      <span className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
+      <span className="absolute z-0 transition scale-95 opacity-0 -inset-y-6 -inset-x-4 bg-zinc-50 group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
       <Link {...props}>
-        <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl" />
+        <span className="absolute z-20 -inset-y-6 -inset-x-4 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
       </Link>
     </>
@@ -46,7 +47,7 @@ const CardCta = ({ children }: React.PropsWithChildren) => {
   return (
     <div
       aria-hidden="true"
-      className="relative z-10 mt-4 flex items-center text-sm font-medium text-primary"
+      className="relative z-10 flex items-center mt-4 text-sm font-medium text-primary"
     >
       {children}
       <span className="ml-1">→</span>

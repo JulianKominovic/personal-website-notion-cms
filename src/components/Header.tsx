@@ -6,6 +6,7 @@ import { AvatarContainer } from './AvatarContainer';
 import { Container } from './Container';
 import { MobileNavigation, DesktopNavigation } from './Navigation';
 import { ThemeToggle } from './ThemeToggle';
+import Cmdk from './search/cmdk';
 
 const clamp = (number: number, a: number, b: number) => {
   let min = Math.min(a, b);
@@ -112,7 +113,7 @@ export const Header = () => {
   return (
     <>
       <header
-        className="pointer-events-none relative z-50 flex flex-col"
+        className="relative z-50 flex flex-col pointer-events-none"
         style={{
           height: 'var(--header-height)',
           marginBottom: 'var(--header-mb)',
@@ -125,7 +126,7 @@ export const Header = () => {
               className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
             />
             <Container
-              className="top-0 order-last -mb-3 pt-3"
+              className="top-0 order-last pt-3 -mb-3"
               style={{ position: 'var(--header-position)' } as unknown as React.CSSProperties}
             >
               <div
@@ -136,7 +137,7 @@ export const Header = () => {
               >
                 <div className="relative">
                   <AvatarContainer
-                    className="absolute left-0 top-3 origin-left transition-opacity"
+                    className="absolute left-0 transition-opacity origin-left top-3"
                     style={{
                       opacity: 'var(--avatar-border-opacity, 0)',
                       transform: 'var(--avatar-border-transform)',
@@ -144,7 +145,7 @@ export const Header = () => {
                   />
                   <Avatar
                     large
-                    className="block h-16 w-16 origin-left"
+                    className="block w-16 h-16 origin-left"
                     style={{ transform: 'var(--avatar-image-transform)' }}
                   />
                 </div>
@@ -169,15 +170,16 @@ export const Header = () => {
                   </AvatarContainer>
                 )}
               </div>
-              <div className="flex flex-1 justify-end md:justify-center">
+              <div className="flex justify-end flex-1 md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
-                <DesktopNavigation className="pointer-events-auto hidden md:block" />
+                <DesktopNavigation className="hidden pointer-events-auto md:block" />
               </div>
               <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">
                   <ThemeToggle />
                 </div>
               </div>
+              <Cmdk />
             </div>
           </Container>
         </div>

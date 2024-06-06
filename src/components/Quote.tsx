@@ -5,11 +5,13 @@ type Props = {
   className?: string;
   quote: string;
   author?: string;
+  id?: string;
 };
 
-export const Quote = ({ className, quote, author }: Props) => {
+export const Quote = ({ className, quote, author, id }: Props) => {
   return (
     <blockquote
+      id={id}
       className={clsx(className, 'rounded-md bg-zinc-100 p-4 dark:bg-zinc-800 border-l-0 ')}
     >
       <div className="relative overflow-visible text-lg font-medium md:flex-grow">
