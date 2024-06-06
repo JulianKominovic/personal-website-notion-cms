@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url><loc>https://jkominovic.dev</loc></url>
+<url><loc>https://jkominovic.dev/bookmarks</loc></url>
 <url><loc>https://jkominovic.dev/creating</loc></url>
 <url><loc>https://jkominovic.dev/notes</loc></url>
 <url><loc>https://jkominovic.dev/techstack</loc></url>
+<url><loc>https://jkominovic.dev/bookmarks/vscode</loc></url>
 <url><loc>https://jkominovic.dev/tags/proof-of-concept</loc></url>
 <url><loc>https://jkominovic.dev/tags/browser-extension</loc></url>
 <url><loc>https://jkominovic.dev/tags/typescript</loc></url>
