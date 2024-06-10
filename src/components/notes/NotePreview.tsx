@@ -7,7 +7,10 @@ import { Note } from '../../lib/notesApi';
 import { Card } from '../Card';
 import { ANIMATION_FROM_PROPS, ANIMATION_TO_PROPS } from '../../lib/animation';
 
-const StaticBadge = ({ className, children }: React.PropsWithChildren<{ className?: string }>) => (
+export const StaticBadge = ({
+  className,
+  children,
+}: React.PropsWithChildren<{ className?: string }>) => (
   <span
     className={clsx(
       className,

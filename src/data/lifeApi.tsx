@@ -2,7 +2,7 @@ import { GitHubIcon } from '../components/icons/GitHubIcon';
 import { XIcon } from '../components/icons/XIcon';
 
 import LogoKoin from '../images/logos/logo-koin.png';
-import LivefeedbackLogo from '../images/logos/live-feedback.svg';
+import LivefeedbackLogo from '../images/logos/live-feedback.png';
 import SittlyLogo from '../images/logos/sittly.png';
 import ClippisIcon from '../images/logos/clipboard-manager.png';
 import EmptyIcon from '../images/logos/empty.svg';
