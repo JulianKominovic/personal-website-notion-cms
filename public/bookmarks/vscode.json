@@ -1,0 +1,189 @@
+[
+  {
+    "ogTitle": "vscode-styled-components - Visual Studio Marketplace",
+    "ogType": "website",
+    "ogUrl": "https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components",
+    "ogDescription": "Extension for Visual Studio Code - Syntax highlighting for styled-components",
+    "twitterCard": "summary",
+    "twitterSite": "@Code",
+    "ogImage": [
+      {
+        "url": "https://styled-components.gallerycdn.vsassets.io/extensions/styled-components/vscode-styled-components/1.7.8/1680721633849/Microsoft.VisualStudio.Services.Icons.Default"
+      }
+    ],
+    "ogLocale": "en-us",
+    "charset": "UTF-8",
+    "requestUrl": "https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components",
+    "success": true
+  },
+  {
+    "ogTitle": "GitHub Copilot - Visual Studio Marketplace",
+    "ogType": "website",
+    "ogUrl": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
+    "ogDescription": "Extension for Visual Studio Code - Your AI pair programmer",
+    "twitterCard": "summary",
+    "twitterSite": "@Code",
+    "ogImage": [
+      {
+        "url": "https://github.gallerycdn.vsassets.io/extensions/github/copilot/1.199.917/1717637856212/Microsoft.VisualStudio.Services.Icons.Default"
+      }
+    ],
+    "ogLocale": "en-us",
+    "charset": "UTF-8",
+    "requestUrl": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
+    "success": true
+  },
+  {
+    "ogTitle": "Prettier - Code formatter - Visual Studio Marketplace",
+    "ogType": "website",
+    "ogUrl": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
+    "ogDescription": "Extension for Visual Studio Code - Code formatter using prettier",
+    "twitterCard": "summary",
+    "twitterSite": "@Code",
+    "ogImage": [
+      {
+        "url": "https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/10.4.0/1711025051911/Microsoft.VisualStudio.Services.Icons.Default"
+      }
+    ],
+    "ogLocale": "en-us",
+    "charset": "UTF-8",
+    "requestUrl": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
+    "success": true
+  },
+  {
+    "ogTitle": "ESLint - Visual Studio Marketplace",
+    "ogType": "website",
+    "ogUrl": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint",
+    "ogDescription": "Extension for Visual Studio Code - Integrates ESLint JavaScript into VS Code.",
+    "twitterCard": "summary",
+    "twitterSite": "@Code",
+    "ogImage": [
+      {
+        "url": "https://dbaeumer.gallerycdn.vsassets.io/extensions/dbaeumer/vscode-eslint/3.0.7/1716355731734/Microsoft.VisualStudio.Services.Icons.Default"
+      }
+    ],
+    "ogLocale": "en-us",
+    "charset": "UTF-8",
+    "requestUrl": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint",
+    "success": true
+  },
+  {
+    "ogTitle": "Live Share - Visual Studio Marketplace",
+    "ogType": "website",
+    "ogUrl": "https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare",
+    "ogDescription": "Extension for Visual Studio Code - Real-time collaborative development from the comfort of your favorite tools.",
+    "twitterCard": "summary",
+    "twitterSite": "@Code",
+    "ogImage": [
+      {
+        "url": "https://ms-vsliveshare.gallerycdn.vsassets.io/extensions/ms-vsliveshare/vsliveshare/1.0.5918/1709669798447/Microsoft.VisualStudio.Services.Icons.Default"
+      }
+    ],
+    "ogLocale": "en-us",
+    "charset": "UTF-8",
+    "requestUrl": "https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare",
+    "success": true
+  },
+  {
+    "ogTitle": "Symbols - Visual Studio Marketplace",
+    "ogType": "website",
+    "ogUrl": "https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols",
+    "ogDescription": "Extension for Visual Studio Code - A simple file icon theme for VS Code",
+    "twitterCard": "summary",
+    "twitterSite": "@Code",
+    "ogImage": [
+      {
+        "url": "https://miguelsolorio.gallerycdn.vsassets.io/extensions/miguelsolorio/symbols/0.0.17/1712208109948/Microsoft.VisualStudio.Services.Icons.Default"
+      }
+    ],
+    "ogLocale": "en-us",
+    "charset": "UTF-8",
+    "requestUrl": "https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols",
+    "success": true
+  },
+  {
+    "ogTitle": "SVG - Visual Studio Marketplace",
+    "ogType": "website",
+    "ogUrl": "https://marketplace.visualstudio.com/items?itemName=jock.svg",
+    "ogDescription": "Extension for Visual Studio Code - SVG Coding, Minify, Pretty, Preview All-In-One",
+    "twitterCard": "summary",
+    "twitterSite": "@Code",
+    "ogImage": [
+      {
+        "url": "https://jock.gallerycdn.vsassets.io/extensions/jock/svg/1.5.3/1688276270272/Microsoft.VisualStudio.Services.Icons.Default"
+      }
+    ],
+    "ogLocale": "en-us",
+    "charset": "UTF-8",
+    "requestUrl": "https://marketplace.visualstudio.com/items?itemName=jock.svg",
+    "success": true
+  },
+  {
+    "ogTitle": "rust-analyzer - Visual Studio Marketplace",
+    "ogType": "website",
+    "ogUrl": "https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer",
+    "ogDescription": "Extension for Visual Studio Code - Rust language support for Visual Studio Code",
+    "twitterCard": "summary",
+    "twitterSite": "@Code",
+    "ogImage": [
+      {
+        "url": "https://rust-lang.gallerycdn.vsassets.io/extensions/rust-lang/rust-analyzer/0.4.1986/1717634223327/Microsoft.VisualStudio.Services.Icons.Default"
+      }
+    ],
+    "ogLocale": "en-us",
+    "charset": "UTF-8",
+    "requestUrl": "https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer",
+    "success": true
+  },
+  {
+    "ogTitle": "Headwind - Visual Studio Marketplace",
+    "ogType": "website",
+    "ogUrl": "https://marketplace.visualstudio.com/items?itemName=heybourn.headwind",
+    "ogDescription": "Extension for Visual Studio Code - An opinionated class sorter for Tailwind CSS",
+    "twitterCard": "summary",
+    "twitterSite": "@Code",
+    "ogImage": [
+      {
+        "url": "https://heybourn.gallerycdn.vsassets.io/extensions/heybourn/headwind/1.7.0/1595154492943/Microsoft.VisualStudio.Services.Icons.Default"
+      }
+    ],
+    "ogLocale": "en-us",
+    "charset": "UTF-8",
+    "requestUrl": "https://marketplace.visualstudio.com/items?itemName=heybourn.headwind",
+    "success": true
+  },
+  {
+    "ogTitle": "Fluent Icons - Visual Studio Marketplace",
+    "ogType": "website",
+    "ogUrl": "https://marketplace.visualstudio.com/items?itemName=miguelsolorio.fluent-icons",
+    "ogDescription": "Extension for Visual Studio Code - Fluent product icons for Visual Studio Code",
+    "twitterCard": "summary",
+    "twitterSite": "@Code",
+    "ogImage": [
+      {
+        "url": "https://miguelsolorio.gallerycdn.vsassets.io/extensions/miguelsolorio/fluent-icons/0.0.18/1658854116627/Microsoft.VisualStudio.Services.Icons.Default"
+      }
+    ],
+    "ogLocale": "en-us",
+    "charset": "UTF-8",
+    "requestUrl": "https://marketplace.visualstudio.com/items?itemName=miguelsolorio.fluent-icons",
+    "success": true
+  },
+  {
+    "ogTitle": "Eva Theme - Visual Studio Marketplace",
+    "ogType": "website",
+    "ogUrl": "https://marketplace.visualstudio.com/items?itemName=fisheva.eva-theme",
+    "ogDescription": "Extension for Visual Studio Code - A comfortable and semantic theme.",
+    "twitterCard": "summary",
+    "twitterSite": "@Code",
+    "ogImage": [
+      {
+        "url": "https://fisheva.gallerycdn.vsassets.io/extensions/fisheva/eva-theme/2.6.5/1716954908865/Microsoft.VisualStudio.Services.Icons.Default"
+      }
+    ],
+    "ogLocale": "en-us",
+    "charset": "UTF-8",
+    "requestUrl": "https://marketplace.visualstudio.com/items?itemName=fisheva.eva-theme",
+    "success": true
+  }
+]

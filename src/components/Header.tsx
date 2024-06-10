@@ -21,7 +21,7 @@ export const Header = () => {
   let avatarRef = useRef<HTMLDivElement | null>(null);
   let isInitial = useRef(true);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let downDelay = avatarRef.current?.offsetTop ?? 0;
     let upDelay = 64;
 
