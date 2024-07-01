@@ -6,6 +6,7 @@ import LivefeedbackLogo from '../images/logos/live-feedback.png';
 import SittlyLogo from '../images/logos/sittly.png';
 import ClippisIcon from '../images/logos/clipboard-manager.png';
 import EmptyIcon from '../images/logos/empty.svg';
+import BentiscaLogo from '../images/logos/bentisca-logo.png';
 import { LinkedInIcon } from '../components/icons/LinkedInIcon';
 import {
   SimpleIcon,
@@ -61,18 +62,30 @@ export type Project = {
     label: string;
     href: string;
   };
+  status?: 'online' | 'offline';
 };
 
 export const MyCurrentProjects: Project[] = [
   {
     title: 'Live feedback',
-    techStack: ['TypeScript', 'React', 'Browser Extension'],
+    techStack: ['TypeScript', 'React', 'Script'],
     description:
-      'Browser extension that allows you to share feedback with your development team in real-time, right on the website.',
+      'Script that allows you to share feedback with your development team in real-time, right on the website.',
     logo: LivefeedbackLogo,
     link: {
-      label: 'github.com',
-      href: 'https://github.com/JulianKominovic/live-feedback',
+      label: 'live-feedback.jkominovic.dev',
+      href: 'https://live-feedback.jkominovic.dev',
+    },
+  },
+  {
+    title: 'Bentisca',
+    techStack: ['Next.js', 'Typescript', 'API'],
+    description:
+      "About 22 handcrafted social media bento cards thanks to Double Glitch's figma design and dynamic card icons using SimpleIcons.",
+    logo: BentiscaLogo,
+    link: {
+      label: 'bentos.jkominovic.dev',
+      href: 'https://bentos.jkominovic.dev',
     },
   },
 ];
@@ -87,6 +100,7 @@ export const MyPastProjects: Project[] = [
       label: 'github.com',
       href: 'https://github.com/JulianKominovic/sittly-launcher',
     },
+    status: 'offline',
   },
   {
     title: 'Clippis',
@@ -97,6 +111,7 @@ export const MyPastProjects: Project[] = [
       label: 'github.com',
       href: 'https://github.com/JulianKominovic/clipboard-manager',
     },
+    status: 'offline',
   },
   {
     title: 'gnome-dbus-api',
@@ -108,6 +123,7 @@ export const MyPastProjects: Project[] = [
       label: 'github.com',
       href: 'https://github.com/JulianKominovic/gnome-dbus-api',
     },
+    status: 'offline',
   },
 ];
 
