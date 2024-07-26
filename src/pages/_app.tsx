@@ -10,6 +10,7 @@ import { Header } from '../components/Header';
 import '../styles/index.css';
 import '../styles/prism.css';
 import '../styles/raycast.css';
+import 'react-notion-x/src/styles.css';
 import clsx from 'clsx';
 
 function usePrevious(value: string) {
