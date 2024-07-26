@@ -1,9 +1,9 @@
 // @ts-nocheck
 import { Client, isFullPage } from '@notionhq/client';
-import { BlockObjectResponse, PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import { BlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import { compareAsc, compareDesc } from 'date-fns';
 import { getPlaiceholder } from 'plaiceholder';
-
+import { NotionCompatAPI } from 'notion-compat';
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
@@ -115,7 +115,9 @@ class NotesApi {
   }
 
   async getNote(id: string) {
-    return this.getPageContent(id);
+    const notion = new NotionCompatAPI(this.notion);
+    const recordMap = await notion.getPage(id);
+    return recordMap;
   }
 
   async getAllTags() {
@@ -184,6 +186,8 @@ class NotesApi {
         return block;
       }),
     );
+
+    return blocksChildren;
 
     return Promise.all(
       blocksChildren.map(async (block) => {
